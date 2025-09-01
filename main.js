@@ -1,17 +1,19 @@
-//Kino Kasse
+//Blitzer
 
 function main(){
-    let input = document.getElementById("age")
-    let age = input.value
+    let inputMaxSpeed = document.getElementById("maxSpeed")
+    let inputSpeed = document.getElementById("speed")
+    let inputDir = document.getElementById("dir")
 
+    let maxSpeed = Number(inputMaxSpeed.value)
+    let speed = Number(inputSpeed.value)
+    let isFacing = inputDir.checked
 
-    if(age < 0 || age > 110){
-        alert("Bitte trage ein gültiges Alter ein")
-    } else if(age <= 6 || age >= 60){
-        alert("Preis beträgt 4€")
-    } else {
-        alert("Preis beträgt 6.50€")
-    }
+    let maxSpeedWithOffset = Number(maxSpeed + ((maxSpeed/100)*10))
+    console.log(maxSpeedWithOffset)
 
+    if(speed > maxSpeedWithOffset && isFacing == true){
+        alert("Du wurdest geblitzt")
+    } 
 
 }
