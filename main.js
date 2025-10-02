@@ -1,4 +1,4 @@
-// Aufgabe 2
+// Aufgabe 2 Teil 2
 
 /* 
 Erstelle ein Array mit 5 Studenten.
@@ -6,11 +6,7 @@ Jeder Student besteht aus 'Name', 'Matrikelnummer', 'NC'
 */
 
 let studenten = [
-    {name: "Michael", matrikelnummer: 1, nc: 2},
-    {name: "Hans", matrikelnummer: 2, nc: 3.5},
-    {name: "Jannick", matrikelnummer: 3, nc: 1.5},
-    {name: "Klaus", matrikelnummer: 4, nc: 1.0},
-    {name: "Maria", matrikelnummer: 5, nc: 2.4}
+
 ]
 
 /* 
@@ -29,12 +25,29 @@ function ausgabeUndDurchschnitt() {
         let student = studenten[i];
         console.log(student);
         
-        totalNC += student.nc;
+        totalNC += student.NC;
 
     }
 
     let averageNC = totalNC / studenten.length;
     console.log("NC Durchschnitt: " + averageNC);
+
+}
+
+function addStudent(){
+
+    let name = document.getElementById("inputName").value;
+    let matrikel = parseInt(document.getElementById("inputMatrikel").value);
+    let nc = parseFloat(document.getElementById("inputNC").value);
+    
+    let student = {
+        "Name": name,
+        "Matrikelnummer": matrikel,
+        "NC": nc
+    }
+
+    studenten.push(student);
+    console.log(studenten);
 
 }
 
