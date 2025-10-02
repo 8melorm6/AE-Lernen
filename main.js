@@ -1,4 +1,4 @@
-// Aufgabe
+// Aufgabe 2
 
 /* 
 Erstelle ein Array mit 5 Studenten.
