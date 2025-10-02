@@ -1,161 +1,78 @@
-// Schleifen (Loops)
+// Funktionen
+
+/*
+function main(){
+    printNumber(10);
+}
+
+function printNumber(x) {
+    console.log(x);
+}
+*/
+
+/*
+function main(){            
+    add();      // Ergebnis = 3 (Standartwerte aus der add Funktion)
+    add(10);    // Ergebnis = 12 (10 + y Standartwert der add Funktion)
+    add(5,3);   // Ergebnis = 8 (5+3..... Standartwerte werden nicht genutzt)
+}
+
+function add(x=1, y=2) {        // x=1, y=2  als Standartwerte
+    let result = x + y;
+    console.log(result);
+}
+*/
+
+/*
+let numbers = [
+    7,
+    48,
+    23,
+    9,
+    45,
+    67,
+    99,
+    1,
+    20,
+    77,
+    94
+]
+
+let numbersTwo = [
+    7,
+    48,
+    23,
+    9,
+    45,
+    67,
+    99,
+    1,
+    20,
+    77,
+    94
+]
 
 function main(){
 
-// -----------------------------------------------------------------
-// ---------------------------for-----------------------------------
-// -----------------------------------------------------------------
+    result = filter(numbers, 75);
+    console.log(result);
 
-/*---------------------------------------------------------------------
-let names = ["Peter", "Jannick", "Maria"];  
-// Ein Array (Liste) mit drei Zeichenketten: Index 0="Peter", 1="Jannick", 2="Maria".
+    result = filter(numbersTwo, 30);
+    console.log(result);
 
-for (let i = 0; i < names.length; i++) {  
-    // Startwert: i = 0
-    // Bedingung: Schleife läuft solange i < names.length (3).
-    // i wird nach jedem Durchlauf um 1 erhöht.
-
-    console.log("Index: " + i + " Name: " + names[i]);  
-    // Gibt eine Zeichenkette aus, die Index und Wert im Array zeigt.
-    // Bei i=0 -> "Index: 0 Name: Peter"
-    // Bei i=1 -> "Index: 1 Name: Jannick"
-    // Bei i=2 -> "Index: 2 Name: Maria"
 }
----------------------------------------------------------------------*/
 
-/*---------------------------------------------------------------------
-let revenue = [500, 300, 200, 599, 834, 573, 293, 482];  
-// Ein Array mit Zahlen (Umsätze).
+function filter(arrayToFilter, highestNumberAllowed){
 
-let totalRevenue = 0;  
-// Variable für die Summe aller Umsätze, Startwert 0.
+    var filteredNumbers = [];
 
-for (let i = 0; i < revenue.length; i++) {  
-    // Startwert: i = 0
-    // Bedingung: Schleife läuft solange i < revenue.length (8).
-    // i wird nach jedem Durchlauf um 1 erhöht.
+    for (let i = 0; i < arrayToFilter.length; i++) {
 
-    totalRevenue += revenue[i];  
-    // Kurzform für: totalRevenue = totalRevenue + revenue[i]
-    // Der aktuelle Umsatzwert wird zur Gesamtsumme addiert.
-
-    console.log(totalRevenue);  
-    // Gibt die Zwischensumme nach jeder Addition aus.
-}
-console.log("Total-Revenue: " + totalRevenue);  
-// Am Ende wird die Gesamtsumme aller Umsätze ausgegeben.
----------------------------------------------------------------------*/
-
-/*---------------------------------------------------------------------
-// Array mit mehreren Objekten
-let cars = [
-    {
-        "brand": "Mercedes",
-        "age": 10
-    },
-    {
-        "brand": "VW",
-        "age": 5
-    },
-    {
-        "brand": "Toyota",
-        "age": 3
+        if(arrayToFilter[i] <= highestNumberAllowed)
+            filteredNumbers.push(arrayToFilter[i])
+        
     }
-]
 
-// Geht alle Elemente des Arrays durch.
-    // Bei jedem Durchlauf ist 'car' ein komplettes Objekt.
-    // 1. Durchlauf: car = { brand: "Mercedes", age: 10 }
-    // 2. Durchlauf: car = { brand: "VW", age: 5 }
-    // 3. Durchlauf: car = { brand: "Toyota", age: 3 }
-for(let car of cars){
-
-    if(car.brand == "Mercedes"){
-        console.log(car);
-    } else {
-        console.log("Auto ist kein Mercedes");
-    } 
+    return filteredNumbers;
 }
----------------------------------------------------------------------*/
-
-// -----------------------------------------------------------------
-// ------------------------(do)while------------------------------------
-// -----------------------------------------------------------------
-
-/*-----------------------------------------------------------------
-let counter = 0;
-
-while (counter < 100){
-    console.log(counter);
-    counter++;
-}
-
-
-//  do {
-//    console.log(counter);
-//  } while(counter <100);
-
-
------------------------------------------------------------------------*/
-
-// -----------------------------------------------------------------
-// ------------------------nested loops----------------------------------
-// -----------------------------------------------------------------
-
-/*-----------------------------------------------------------------
-var days = 7;
-var weeks = 5;
-
-for (let i = 1; i <= weeks; i++) {
-
-    console.log("Woche: " + i);
-
-    for(let j = 1; j <= days; j++)
-        console.log("Tag: " + j + " Woche " + i);
-}
-
------------------------------------------------------------------------*/
-
-// -----------------------------------------------------------------
-// ------------------------break und continue----------------------------
-// -----------------------------------------------------------------
-
-/*
-
-var numbers = [
-    100,
-    350,
-    250,
-    375,
-    1000,
-    750,
-    650,
-    3000,
-    1050,
-    500
-]
-
-for (let i = 0; i < numbers.length; i++) {
-
-    /* continue
-    if(numbers[i] < 1000)
-        continue;
-
-    console.log(numbers[i]);
-    */
-
-    /* break
-    console.log(numbers[i]);
-
-    if(numbers[i] >= 1000)
-        console.log("Found >= 1000");
-        break;
-    */
-
-
-
-}
-
-
-
-
+*/
